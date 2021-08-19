@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="grid.css">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="signupcss.css">
+    <link rel="stylesheet" type="text/css" href="allcss.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+    <title>Healthifyyoursnack</title>
+
+<body>
+    <header>
+        <nav>
+            <div class="row">
+                <img src="images/logo.png" alt="Healthifyyoursnack logo" class="logo">
+                <ul class="main-navi">
+                    <li>
+                        <a href="project1.php">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="textbox">
+            <h1> A guide to healthy snacks with easily available ingredients. </h1>
+            <h2>Register</h2>
+            <form action="projectsignup.php" method="post">
+               
+                <input type="text" name="username" id="name" placeholder="Enter username" required>
+                <br>
+                
+                <input type="password" name="password" id="password" placeholder="Enter password" minlength="8" required>
+                <br>
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="confirm password" minlength="8" required>
+                <br>
+                <input type="text" name="age" id="age" placeholder="Enter your age">
+                <br>
+                <input type="text" name="email" id="email" placeholder="Enter your email" required>
+                <br>
+            
+                <button class="butn">Submit</button>
+            </form>
+            </div>
+    </header>
+
+</body>
+</head>
+
+</html>

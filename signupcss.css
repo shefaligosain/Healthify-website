@@ -1,0 +1,141 @@
+/*basic setup*/
+/*------------------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: #fff;
+    color: rgb(24, 23, 23);
+    font-family: 'Lato','Arial','Sans-serif';
+    font-size: 18px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+/*reusable components*/
+/*------------------------------------------------------------*/
+.row{
+    max-width: 1140px;
+    margin: 0 auto 0 auto;
+    
+}
+
+section{
+    padding: 20px 0;
+}
+
+/*Header*/
+/*------------------------------------------------------------*/
+header{
+background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(images/headerimg.jpg);
+background-size: cover;
+background-position: center;
+height: 100vh;
+}
+
+.textbox{
+    width: 1140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: 45px;
+}
+.logo{
+    height: 75px;
+    border-radius: 200px;
+    border: black;
+    width: auto;
+    margin-top: 18px;
+
+}
+
+.main-navi{
+    list-style: none;
+    float: right;
+}
+
+.main-navi li{
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 20px;
+}
+
+.main-navi li a:link,
+.main-navi li a:visited{
+  padding: 8px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  color: #fff;
+  font-weight: 350;
+  transition: border-bottom 0.2s;
+}
+
+.main-navi li a:hover,
+.main-navi li a:active{
+    border-bottom: 2px solid #00a93f;
+  }
+
+/*headings*/
+/*------------------------------------------------------------*/
+h1,h2{
+    font-size: 160%;
+    font-weight: 350;
+    text-transform: uppercase;
+    
+}
+
+h1{
+    margin-top: 0;
+    word-spacing: 2px;
+    margin-bottom: 22px;
+    color: #fff;
+}
+
+
+h2{
+    font-size: 120%;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+
+/*form inputs*/
+/*------------------------------------------------------------*/
+input{
+    font-size: 15px;
+    width: 50%;
+    margin: 6px;
+    padding: 8px;
+    border-color: #27fd76;
+    border-radius: 10px;
+    border-width: 4px;
+    outline: none;
+
+}
+
+form{
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.butn:link,
+.butn:visited{
+    background-color: #27fd76;
+    color: black;
+    padding: 20px 20px;
+}
+
+
+.butn:hover,
+.butn:active{
+    background-color: #00a93f;
+}

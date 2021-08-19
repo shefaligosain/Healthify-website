@@ -1,0 +1,173 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto 0 auto;
+   
+}
+
+.row{
+    max-width: 2000px;
+    height: 600px;
+    padding: 0;
+    margin: 0 auto 0 auto;
+    
+    
+}
+
+html{
+    font-family: 'Lato','Arial','Sans-serif';
+    color: black;
+    margin: 0 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(images/list.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    }
+    
+    .textbox{
+        width: 1140px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+    }
+    .logo{
+        height: 75px;
+        border-radius: 200px;
+        border: black;
+        width: auto;
+        margin-top: 1px;
+    
+    }
+    
+h1{
+    text-align: center;
+    margin: 0 auto 0 auto;
+    color: white;
+    text-shadow: 4px 13px 11px #000000;
+
+}
+
+.navi{
+    margin-top: 1px;
+    list-style: none;
+    float: right;
+}
+
+.navi li{
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 5px;
+
+}
+
+.navi li a:link,
+.navi li a:visited{
+    padding: 10px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    color: #edb7b7;
+    font-weight: 550;
+    transition: border-bottom 0.2s;
+    border-bottom: 3px solid #909cc4;
+}
+
+.navi li a:hover,
+.navi li a:active{
+    border-bottom: 4px solid #0d2572;
+  }
+
+  input{
+    font-size: 15px;
+    width: 50%;
+    margin: 6px;
+    padding: 8px;
+    border-color: #27fd76;
+    border-radius: 10px;
+    border-width: 4px;
+    outline: none;
+  float: right;
+}
+
+#add{
+    float: right;
+    position: absolute;
+    top: 110%;
+    right: 23%;
+
+
+}
+
+.box2{
+    display: grid;
+    place-content: center;
+}
+
+
+
+form{
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.butn{
+    background-color: #7efaac;
+}
+
+.butn:link,
+.butn:visited{
+    color: black;
+    padding: 20px 20px;
+}
+
+
+.butn:hover,
+.butn:active{
+    background-color: #00a93f;
+}
+
+table{
+    width: 500px;
+    border: 3px solid #edb7b7;
+}
+
+tr{
+    width: 100px;
+    text-align: center;
+    background-color: #909cc4;
+}
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+    .textbox{width: 300px;}
+    table{width: 300px;}
+    input{font-size: 12px;}
+}
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+    body { font-size: 13px;} 
+        .textbox{width: 400px;}
+        table{width: 400px;}
+    }
+
+    /* Small tablet to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+    body { font-size: 18px; }
+    .textbox{width: 500px;}
+  }
+
+ /* Big tablet to 1200px (widths smaller taht the 1140px row) */
+@media only screen and (max-width: 1200px) {
+    .textbox{width: 500px;}
+}

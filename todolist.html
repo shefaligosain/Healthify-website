@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="todolist.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+    <title>Todo-List</title>
+
+<body>
+    <header>
+        <h1>Shopping List</h1>
+        <nav>
+            <div class="row">
+                <img src="images/logo.png" alt="Healthifyyoursnack logo" class="logo">
+                <ul class="navi">
+                    <li><a href="project.php">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="textbox">
+                <input type="text" name="item" id="title" placeholder="Enter item">
+                <br>
+                <input type="text" name="des" id="des" placeholder="Enter item's description">
+                <br>
+                <button class="butn" id="add">Add to list</button>
+            
+        </div>
+        </header>
+        <div class="box2">
+         <h2>YOUR ITEMS</h2>
+         <table class="table">
+          <thead>
+              <tr>
+                  <th scope="col">sno.</th>
+                  <th scope="col">Item list</th>
+                  <th scope="col">Item Description</th>
+                  <th>action</th>
+              </tr>
+          </thead>
+          <tbody id="tableBody">
+              <tr>
+                  <th scope="row">1</th>
+                  <td>get some coffee</td>
+                  <td>you need coffee as are sleepy</td>
+                  <td><button class="butn">delete</button></td>
+              </tr>
+          </tbody>
+         </table>
+        </div>
+    <script>
+     function getAndUpdate(){
+                console.log("Updating List...");
+                tit = document.getElementById('title').value;
+                desc = document.getElementById('des').value;
+                if (localStorage.getItem('itemsJson')==null){
+                    itemJsonArray = [];
+                    itemJsonArray.push([tit, desc]);
+                    localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+                }
+                else{
+                    itemJsonArrayStr = localStorage.getItem('itemsJson')
+                    itemJsonArray = JSON.parse(itemJsonArrayStr);
+                    itemJsonArray.push([tit, desc]);
+                    localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+                }
+                update();
+            }
+
+            function update(){
+                if (localStorage.getItem('itemsJson')==null){
+                    itemJsonArray = []; 
+                    localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+                } 
+                else{
+                    itemJsonArrayStr = localStorage.getItem('itemsJson')
+                    itemJsonArray = JSON.parse(itemJsonArrayStr); 
+                }
+                // Populate the table
+                let tableBody = document.getElementById("tableBody");
+                let str = "";
+                itemJsonArray.forEach((element, index) => {
+                    str += `
+                    <tr>
+                    <th scope="row">${index + 1}</th>
+                    <td>${element[0]}</td>
+                    <td>${element[1]}</td> 
+                    <td><button class="btn" onclick="deleted(${index})">delete</button></td> 
+                    </tr>`; 
+                });
+                tableBody.innerHTML = str;
+            }
+            add = document.getElementById("add");
+            add.addEventListener("click", getAndUpdate);
+            update();
+            function deleted(itemIndex){
+                console.log("Delete", itemIndex);
+                itemJsonArrayStr = localStorage.getItem('itemsJson')
+                itemJsonArray = JSON.parse(itemJsonArrayStr);
+                // Delete itemIndex element from the array
+                itemJsonArray.splice(itemIndex, 1);
+                localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
+                update();
+
+            }
+            function clearStorage(){
+                if (confirm("Do you areally want to clear?")){
+                console.log('Clearing the storage')
+                localStorage.clear();
+                update();
+                }
+            }
+    
+    </script>
+</body>
+</head>
+
+</html>

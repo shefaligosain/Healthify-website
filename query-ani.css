@@ -1,0 +1,111 @@
+/*media queries*/
+@media only screen and (max-width: 1200px) {
+    .textbox{
+        width: 100%;
+        padding: 0 2%;
+       
+    }
+    .span-2-of-2 {
+		width: 100%; 
+	}
+	.span-1-of-2 {
+		width: 100%; 
+	}
+    .row{
+    padding: 0 6%;
+    }
+
+}
+
+@media only screen and (max-width: 1023px) {
+section{padding: 50px 0;}
+body{font-size: 17px;}
+.longtext{width: 80%;}
+.span-2-of-2 {
+    margin-left: 2%;
+}
+.span-1-of-2 {
+    margin-left: 2%;
+}
+.contact-form { width: 80%; }
+}
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+    body { font-size: 13px; }
+    section { padding: 30px 0; }
+    
+.logo{
+    height: 40px;
+}
+
+    .row,
+    .textbox { padding: 0 4%; }
+    .col { 
+        width: 100%;
+        margin: 0 0 4% 0;
+    }
+    
+    
+    .main-navi { display: none; }
+    .mobile-nav-icon {display: inline-block;}
+    
+    .main-navi {
+        float: right;
+    }
+    
+    .main-navi li {
+        display: block;
+    }
+    
+    .main-navi li a:link,
+    .main-navi li a:visited {
+        display: block;
+        border: 0;
+        padding: 10px 0;
+        font-size: 100%;
+    }
+
+    .sticky .mobile-nav-icon { margin-top: 10px; }
+    .sticky .mobile-nav-icon i { color: white; }
+    
+    
+    h1 { font-size: 180%; }
+    h2 { font-size: 150%; }
+    
+}
+
+
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3,
+.js--wp-4,
+.js--wp-5,
+.js--wp-6,
+.js--wp-7,
+.js--wp-8,
+.js--wp-9,
+.js--wp-10,
+.js--wp-11,
+.js--wp-12
+{
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated,
+.js--wp-4.animated,
+.js--wp-5.animated,
+.js--wp-6.animated,
+.js--wp-7.animated,
+.js--wp-8.animated,
+.js--wp-9.animated,
+.js--wp-10.animated,
+.js--wp-11.animated,
+.js--wp-12.animated {
+    opacity: 1;
+}
