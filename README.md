@@ -14,3 +14,10 @@ This project is a fully functional website that looks fantastic on any computer,
 ![image](https://user-images.githubusercontent.com/88782820/177268050-0942f576-b12c-4fab-98d8-2da81366aaf7.png)
 
 ![image](https://user-images.githubusercontent.com/88782820/177268083-4f678ea1-9293-4ba6-a0b6-1eefa954421b.png)
+
+
+![image](https://user-images.githubusercontent.com/88782820/177270053-720248a4-8193-4be8-bfee-e3155e483bae.png)
+
+
+![image](https://user-images.githubusercontent.com/88782820/177270120-13d3f3f1-9455-4533-b0bb-5926c6c1e7df.png)
+
